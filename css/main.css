@@ -12,9 +12,16 @@
    Base styles: opinionated defaults
    ========================================================================== */
 @font-face {
-  font-family: 'myFirstFont';
+  font-family: 'bau';
   src: url('../fonts/BauPro-Medium.ttf') format('truetype');
 }
+/* @font-face {
+  font-family: 'bau';
+  src: url('../fonts/BauWebPro-Medium.eot');
+  src: url('../fonts/BauPro-Medium.ttf')  format('truetype'),
+      url('../fonts/BauWebPro-Medium.woff') format('woff'),
+} */
+
 *,
 *:before,
 *:after {
@@ -22,6 +29,7 @@
 }
 
 html, body {
+  font-family: 'bau', Fallback, sans-serif;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -31,7 +39,6 @@ html, body {
 }
 
 .container {
-  font-family: 'myFirstFont', serif;
   color: #fff;
   background-color: #000;
   padding: 0;
@@ -385,15 +392,19 @@ textarea:focus {
   .contnued {
     margin-top: 10%;
   }
+  .model-paragraph {
+    font-size: 1em;
+    line-height: 1.3em;
+  }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px){
   h1 {
     font-size: 5em;
     margin-top: 5%;
-    color: gray;
   }
   .contnued {
+    margin-top: 15%;
     font-size: 1em;
   }
   .logo {
@@ -410,13 +421,15 @@ textarea:focus {
     height: 95%;
     width: 90%;
   }
+  #contact {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px){
   h1 {
     font-size: 6em;
     margin-top: 5%;
-    color: red;
   }
   #imprint .model-content {
     width: 90%;
